@@ -34,7 +34,8 @@ function formatDay(date) {
   if (currentMinutes < 10) {
     currentMinutes = "0".concat(currentMinutes);
   }
-  return `${currentDay}, ${currentDate}. ${currentMonth} ${currentHours}:${currentMinutes}`;
+  return `${currentDay}, ${currentHours}:${currentMinutes},
+  ${currentDate} of ${currentMonth} `;
 }
 
 let dateElement = document.querySelector("#date");
