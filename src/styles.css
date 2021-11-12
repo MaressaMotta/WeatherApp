@@ -18,8 +18,12 @@ h1 {
 }
 
 h2,
-h3 {
+h3,
+.temperature-header {
   font-weight: 100;
+  display: block;
+  text-align: center;
+  font-size: 42px;
 }
 
 p {
