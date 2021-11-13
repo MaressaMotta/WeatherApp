@@ -33,13 +33,7 @@ p {
   text-align: center;
   font-family: monospace;
 }
-li {
-  font-size: 16px;
-  font-weight: 100;
-  list-style: none;
-  height: 18px;
-  list-style: none;
-}
+
 input {
   display: block;
   text-align: center;
@@ -69,4 +63,8 @@ input {
 }
 .weather-form {
   margin: 20px auto;
+}
+.description {
+  display: block;
+  text-align: center;
 }
