@@ -1,15 +1,7 @@
 //Date format
 
 function formatDay(date) {
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
+  let days = ["Sund", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
   let months = [
     "January",
@@ -34,8 +26,7 @@ function formatDay(date) {
   if (currentMinutes < 10) {
     currentMinutes = "0".concat(currentMinutes);
   }
-  return `${currentDay}, ${currentHours}:${currentMinutes},
-  ${currentDate} of ${currentMonth} `;
+  return `${currentDay}, ${currentHours}:${currentMinutes}`;
 }
 
 let dateElement = document.querySelector("#date");
