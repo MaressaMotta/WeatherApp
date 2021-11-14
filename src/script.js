@@ -1,37 +1,23 @@
 //Date format
 
-function formatDay(date) {
-  let days = ["Sund", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+let now = new Date();
 
-  let months = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ];
+let currentDay = document.querySelector(".day");
+let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+let day = days[now.getDay()];
 
-  let currentDay = days[date.getDay()];
-  let currentDate = date.getDate();
-  let currentMonth = months[date.getMonth()];
-  let currentHours = date.getHours();
-  let currentMinutes = date.getMinutes();
-  if (currentMinutes < 10) {
-    currentMinutes = "0".concat(currentMinutes);
-  }
-  return `${currentDay}, ${currentHours}:${currentMinutes}`;
+currentDay.innerHTML = `${day}`;
+
+let currentTime = document.querySelector(".time");
+let hour = now.getHours();
+if (hour < 10) {
+  hour = `0${hour}`;
 }
-
-let dateElement = document.querySelector("#date");
-let currentTime = new Date();
-dateElement.innerHTML = formatDay(currentTime);
+let minutes = now.getMinutes();
+if (minutes < 10) {
+  minutes = `0${minutes}`;
+}
+currentTime.innerHTML = `${hour}:${minutes}`;
 
 //search for city name, display weather
 function displayWeatherCondition(response) {
@@ -83,4 +69,4 @@ submit.addEventListener("submit", inputCity);
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
-searchCity("Dublin");
+searchCity();

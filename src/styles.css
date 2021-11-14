@@ -25,6 +25,7 @@ h3,
   text-align: center;
   font-size: 42px;
   line-height: 1;
+  list-style: none;
 }
 
 p {
@@ -54,17 +55,16 @@ input {
   box-shadow: lightslategrey;
 }
 .units {
-  display: block;
-  text-align: center;
+  padding: 54%;
   position: relative;
-  top: -25px;
-  font-size: 18px;
+  top: -40px;
+  font-size: 15px;
   margin: 0 auto;
 }
 .weather-form {
   margin: 20px auto;
 }
-.description {
+h4 {
   display: block;
   text-align: center;
 }
