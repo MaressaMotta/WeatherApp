@@ -154,7 +154,8 @@ h4 {
   display: block;
   text-align: center;
 }
-p::first-line {
+p {
+  display: block;
   font-size: 14px;
   opacity: 0.7;
   text-align: center;
