@@ -2,11 +2,9 @@
 
 let now = new Date();
 
-let currentDay = document.querySelector(".day");
+let currentDay = document.querySelector("#date");
 let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 let day = days[now.getDay()];
-
-currentDay.innerHTML = `${day}`;
 
 let currentTime = document.querySelector(".time");
 let hour = now.getHours();
@@ -17,11 +15,11 @@ let minutes = now.getMinutes();
 if (minutes < 10) {
   minutes = `0${minutes}`;
 }
-currentTime.innerHTML = `${hour}:${minutes}`;
+currentDay.innerHTML = `${day}, ${hour}:${minutes}`;
 
 //search for city name, display weather
 function displayWeatherCondition(response) {
-  document.querySelector("#EnterCity").innerHTML = response.data.name;
+  document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
   );
@@ -69,4 +67,4 @@ submit.addEventListener("submit", inputCity);
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
-searchCity();
+searchCity("dublin");
