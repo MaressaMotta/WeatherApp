@@ -17,7 +17,7 @@ if (minutes < 10) {
 }
 currentDay.innerHTML = `${day}, ${hour}:${minutes}`;
 
-//search for city name, display weather
+//Search for city name, display weather
 function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
@@ -47,7 +47,7 @@ function inputCity(event) {
   searchCity(city);
 }
 
-//current location button
+//Current location btn
 
 function searchLocation(position) {
   let apiKey = "31fe610defa048ce46128f578b9c1411";
