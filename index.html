@@ -4,18 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="src/styles.css" />
+    
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF"
       crossorigin="anonymous"
     />
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/4d75b70482.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/styles.css" />
     <title>Weather App</title>
   </head>
   <body>
@@ -31,8 +33,8 @@
       <input 
       type="text" 
       class="form-control" 
-      id="EnterCity" 
-      placeholder="Type a City"
+      id="city-input" 
+      placeholder="Type a City.."
       autofocus="on"
       />
       </div>
@@ -53,61 +55,31 @@
     </div>
   </form>  
     <div class="row" >
-      <div class="float-right">
-        <span class="temperature-header" id="temperature" >15</span>
+      <div class="col-6">
+        <div class="clearfix weather-temperature">
+          <img id="icon" width="50"
+          src="" alt="Cloud" />
+        <span class="temperature-header" id="temperature" ></span>
         <span class="units">
           <a  href="#" id="celsius-link">°C </a>|
         <a href="#" id="fahrenheit-link">°F</a></span>
         </div>
-         
+        </div>
       </div>
-    <h2 id="city"> 
-         Dublin
+    <h2 id="city">
       </h2> 
   <h3 id="date">
-    Sunday 21:39
   </h3>
-   <span id="description">Clouds</span>
-<img src="images/cloud-sun-solid.svg" alt="sun-cloud" width="50"/>
-      
-      
+   <span id="description"></span>
       <div class="col-12">
           Humidity:
-          <span id="humidity"> 77</span>%
+          <span id="humidity"> </span>
       </br>
-          Wind: <span id="wind">8 </span>km/h
+          Wind: <span id="wind"> </span>
         </div>
-      
     </br>
   <hr/>
-      <div class="row">
-      <div class="col-2">
-              🌧 Friday
-             <p>10°C / <strong>22°C </strong></p>
-         </div>
-         <div class="col-2">
-              🌥 Saturday
-            <p>15°C / <strong>17°C </strong></p>
-        </div>
-        <div class="col-2">
-              🌤 Sunday
-            <p>20°C / <strong>21°C </strong></p>
-         </div>
-         <div class="col-2">
-              🌥 Monday
-             <p>10°C / <strong>19°C </strong></p>
-         </div>
-         <div class="col-2">
-              🌧Tuesday
-             <p>12°C / <strong>14°C </strong></p>
-  
-         </div>
-         <div class="col-2">
-              🌧Wednesday
-             <p>12°C / <strong>10°C </strong></p>
-  
-         </div>
-        </div>
+      <div class="weather-forecast" id="forecast"></div>
     </div>
     </div>
     <p>
