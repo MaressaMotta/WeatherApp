@@ -110,9 +110,10 @@ function handleSubmit(event) {
   let cityInputElement = document.querySelector("#city-input");
   search(cityInputElement.value);
 }
+// Current Button
 function getCurrentLocation(event) {
   event.preventDefault();
-  navigator.geolocation.getCurrentPosition(searchLocation);
+  navigator.geolocation.getCurrentPosition(search);
 }
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
@@ -130,10 +131,11 @@ function displayCelsiusTemperature(event) {
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
+
 let celsiusTemperature = null;
 
-let currentLocationButton = document.querySelector("#current-location-button");
-currentLocationButton.addEventListener("click", getCurrentLocation);
+let currentLocationButton = document.querySelector(".current-location-button");
+currentLocationButton.addEventListener("click", getCurrentPosition);
 
 let form = document.querySelector("#city-form");
 form.addEventListener("submit", handleSubmit);
