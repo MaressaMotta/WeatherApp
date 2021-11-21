@@ -1,6 +1,10 @@
-html,
-body {
+.background {
   font-family: "Dancing Script", cursive;
+  background-image: url("src/clouds1.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  margin: 30px auto;
 }
 
 h1 {
@@ -10,7 +14,7 @@ h1 {
   margin: 50px 0 50px 0;
   font-weight: 300;
   text-shadow: 5px 5px 10px rgba(37, 163, 210, 0.4);
-  color: #0f7397;
+  color: #f65282;
 }
 
 h2,
@@ -73,8 +77,8 @@ li,
 }
 .units {
   position: relative;
-  top: -38px;
-  font-size: 15px;
+  top: -35px;
+  font-size: 20px;
   margin: 0 auto;
 }
 .weather-form {
