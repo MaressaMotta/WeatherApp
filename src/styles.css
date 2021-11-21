@@ -102,3 +102,10 @@ li,
   color: #f65282;
   font-weight: 700;
 }
+.weather-temperature .active {
+  color: rgb(33, 33, 33);
+  cursor: default;
+}
+.weather-temperature .active:hover {
+  text-decoration: none;
+}
