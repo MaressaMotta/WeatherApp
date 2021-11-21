@@ -55,33 +55,40 @@
     </div>
   </form>  
     <div class="row" >
-      <div class="col-6">
+      <div class="temperature-header">
         <div class="clearfix weather-temperature">
           <img id="icon" width="50"
           src="" alt="Cloud" />
-        <span class="temperature-header" id="temperature" ></span>
+        <span  id="temperature" ></span>
         <span class="units">
           <a  href="#" id="celsius-link">°C </a>|
         <a href="#" id="fahrenheit-link">°F</a></span>
         </div>
         </div>
       </div>
-    <h2 id="city">
-      </h2> 
-  <h3 id="date">
-  </h3>
-   <span id="description"></span>
-      <div class="col-12">
-          Humidity:
-          <span id="humidity"> </span>
       </br>
-          Wind: <span id="wind"> </span>
-        </div>
+    <h2 id="city"></h2> 
+    <h3 id="date"></h3>
     </br>
+      <ul>
+        <li id="description"></li>
+        <li>
+          Humidity:
+          <span id="humidity"> </span>%
+      </li>
+         <li>
+          Wind: <span id="wind"> </span>km/h
+       </li> 
+    </ul></br>
   <hr/>
-      <div class="weather-forecast" id="forecast"></div>
+      <div class="weather-forecast" id="forecast">
+        <span class="forecast-date"></span>
+        <span class="forecast-temperature-max">°</span>
+        <span class="forecast-temperature-min">°</span>
+      </div>
     </div>
     </div>
+  </br>
     <p>
        <a href="https://github.com/MaressaMotta/WheatherApp">Open-source code</a> Coded by Maressa Motta  
         </br>
