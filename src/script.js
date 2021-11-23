@@ -31,6 +31,7 @@ function formatDay(timestamp) {
 }
 
 function displayForecast(response) {
+  console.log(response.data.daily);
   let forecast = response.data.daily;
 
   let forecastElement = document.querySelector("#forecast");
@@ -113,6 +114,7 @@ function handleSubmit(event) {
 // Current Button
 function getCurrentLocation(event) {
   event.preventDefault();
+  console.log(getCurrentLocation);
   navigator.geolocation.getCurrentPosition(search);
 }
 function displayFahrenheitTemperature(event) {
@@ -134,8 +136,8 @@ function displayCelsiusTemperature(event) {
 
 let celsiusTemperature = null;
 
-let currentLocationButton = document.querySelector(".current-location-button");
-currentLocationButton.addEventListener("click", getCurrentPosition);
+let currentLocationButton = document.querySelector("#current-location-button");
+currentLocationButton.addEventListener("click", getCurrentLocation);
 
 let form = document.querySelector("#city-form");
 form.addEventListener("submit", handleSubmit);
