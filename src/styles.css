@@ -1,6 +1,10 @@
+:root {
+  --primary-font: "Dancing Script", cursive;
+  --branding-color: #f65282;
+  --secondary-color: ;
+}
+
 .background {
-  font-family: "Dancing Script", cursive;
-  background-image: url("src/clouds1.jpg");
   background-size: cover;
   background-position: center;
   height: 100%;
@@ -9,12 +13,13 @@
 
 h1 {
   text-align: center;
-  font-size: 34px;
+  font-size: 40px;
   line-height: 48px;
   margin: 50px 0 50px 0;
-  font-weight: 300;
   text-shadow: 5px 5px 10px rgba(37, 163, 210, 0.4);
-  color: #f65282;
+  color: var(--branding-color);
+  font-weight: bolder;
+  font-family: var(--primary-font);
 }
 
 h2,
@@ -24,17 +29,16 @@ h3 {
   font-size: 24px;
   line-height: 1;
   list-style: none;
+  font-weight: bolder;
 }
-h4 {
-  display: block;
-  text-align: center;
-}
+
 p {
   display: block;
   font-size: 14px;
   opacity: 0.7;
   text-align: center;
   font-family: monospace;
+  font-weight: bolder;
 }
 
 input {
@@ -50,7 +54,7 @@ li,
   padding: 0;
   color: rgb(135, 135, 135);
   font-size: 16px;
-  font-weight: 100;
+  font-weight: bolder;
   line-height: 19px;
 }
 .btn-primary {
@@ -61,16 +65,15 @@ li,
   text-align: center;
   margin: 0 auto;
 }
+.btn-success {
+  margin: 0 auto;
+}
 .container .card {
   box-shadow: lightslategrey;
 
   padding: 20px;
 
-  background: radial-gradient(
-    592px at 48.2% 50%,
-    rgba(255, 255, 249, 0.6) 0%,
-    rgb(160, 199, 254) 74.6%
-  );
+  background-image: url("images/cloud.jpg");
 
   border: 4px double rgba(93, 154, 241, 0.5);
   border-radius: 18px;
@@ -95,6 +98,7 @@ li,
 .weather-forecast-date {
   font-size: 16px;
   opacity: 0.5;
+  font-weight: bolder;
 }
 .weather-forecast-temperature-min {
   opacity: 0.5;
@@ -112,4 +116,17 @@ li,
 }
 .weather-temperature .active:hover {
   text-decoration: none;
+}
+@media (max-width: 670px) {
+  .container {
+    margin: auto;
+  }
+  h1 {
+    font-size: 32px;
+    line-height: 1.5;
+  }
+  h2,
+  h3 {
+    font-size: 30px;
+  }
 }

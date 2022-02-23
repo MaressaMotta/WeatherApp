@@ -22,9 +22,11 @@
   </head>
   <body>
      <div class="container">
-      <div class="card">
-      <h1>
-       <img src="images/cloud.svg" width="200" alt="Cloud"/> 
+      <div class="card mt-5">
+      <h1 title="Weather app">
+       <img src="src/images/cloud.svg" 
+       width="200" 
+       alt="Cloud"/> 
        My Wheather App 
       </h1>
    <form class="weather-form" id="city-form">        
@@ -38,7 +40,7 @@
       autofocus="on"
       />
       </div>
-      <div class=" col-3">
+      <div class="col-3 mb-3">
       <input
       type="submit" 
       value=" 🔎 Search" 
@@ -46,11 +48,12 @@
       id="search"
       />
       </div>
-      <div class=" col-3">
-      <button
+      <div class=" col-3 mb-3 ">
+      <input
       class=" btn btn-success shadow-sn" 
       id = "current-location-button"
-      > 📍 Current </button>
+      value=" 📍Current"  
+      />
       </div>
     </div>
   </form>  
@@ -69,13 +72,16 @@
     <h3 id="date"></h3>
     </br>
       <ul>
-        <li id="description"></li>
         <li>
-          Humidity:
+          
+        <span id="description"> </span> 
+      </li>
+        <li>
+         💧 Humidity:
           <span id="humidity"> </span>%
       </li>
          <li>
-          Wind: <span id="wind"> </span>m/h
+         💨 Wind: <span id="wind"> </span>m/h
        </li> 
     </ul></br>
   <hr/>
@@ -89,7 +95,8 @@
     </div>
   </br>
     <p>
-       <a href="https://github.com/MaressaMotta/WheatherApp">Open-source code</a> Coded by Maressa Motta  
+       <a href="https://github.com/MaressaMotta/WheatherApp">
+         Open-source code</a> Coded by Maressa Motta  
         </br>
         <i class="fab fa-instagram"></i> @maressamotta
       </p>
