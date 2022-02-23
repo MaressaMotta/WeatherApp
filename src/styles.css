@@ -41,10 +41,6 @@ p {
   font-weight: bolder;
 }
 
-input {
-  display: block;
-  text-align: center;
-}
 li,
 .description {
   display: block;
@@ -67,6 +63,8 @@ li,
 }
 .btn-success {
   margin: 0 auto;
+  display: block;
+  text-align: center;
 }
 .container .card {
   box-shadow: lightslategrey;
@@ -117,9 +115,15 @@ li,
 .weather-temperature .active:hover {
   text-decoration: none;
 }
+.social-links {
+  font-size: 20px;
+}
+
 @media (max-width: 670px) {
   .container {
     margin: auto;
+    text-align: center;
+    padding: 0;
   }
   h1 {
     font-size: 32px;
@@ -128,5 +132,8 @@ li,
   h2,
   h3 {
     font-size: 30px;
+  }
+  .weather-form {
+    margin: 0 auto;
   }
 }
