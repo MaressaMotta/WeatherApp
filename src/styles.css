@@ -1,7 +1,8 @@
 :root {
   --primary-font: "Dancing Script", cursive;
-  --branding-color: #f65282;
-  --secondary-color: ;
+  --branding-color: rgba(255, 217, 0, 0.507);
+  --secondary-color: rgb(160, 73, 88);
+  --default-font-family: "Baloo 2", cursive;
 }
 
 .background {
@@ -16,7 +17,7 @@ h1 {
   font-size: 40px;
   line-height: 48px;
   margin: 50px 0 50px 0;
-  text-shadow: 5px 5px 10px rgba(37, 163, 210, 0.4);
+  text-shadow: 5px 5px 10px rgba(210, 199, 37, 0.4);
   color: var(--branding-color);
   font-weight: bolder;
   font-family: var(--primary-font);
@@ -30,6 +31,7 @@ h3 {
   line-height: 1;
   list-style: none;
   font-weight: bolder;
+  font-family: var(--default-font-family);
 }
 
 p {
@@ -37,7 +39,7 @@ p {
   font-size: 14px;
   opacity: 0.7;
   text-align: center;
-  font-family: monospace;
+  font-family: var(--primary-font);
   font-weight: bolder;
 }
 
@@ -118,6 +120,9 @@ li,
 .social-links {
   font-size: 20px;
 }
+hr {
+  color: var(--secondary-color);
+}
 
 @media (max-width: 670px) {
   .container {
@@ -135,5 +140,8 @@ li,
   }
   .weather-form {
     margin: 0 auto;
+  }
+  .btn-success {
+    max-width: 50%;
   }
 }
