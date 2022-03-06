@@ -63,7 +63,7 @@ li,
   text-align: center;
   margin: 0 auto;
 }
-.btn-success {
+.btn-sucess {
   margin: 0 auto;
   display: block;
   text-align: center;
@@ -140,8 +140,5 @@ hr {
   }
   .weather-form {
     margin: 0 auto;
-  }
-  .btn-success {
-    max-width: 50%;
   }
 }
